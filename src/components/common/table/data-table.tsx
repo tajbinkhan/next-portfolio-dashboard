@@ -118,7 +118,7 @@ export function DataTable<TData, TValue>({
 
 		return Boolean(
 			target.closest(
-				"button, a, input, textarea, select, option, label, [role='button'], [data-no-row-click='true']"
+				"button, a, input, textarea, select, option, label, [role='button'], [role='dialog'], [role='alertdialog'], [data-no-row-click='true'], [data-slot='dialog-overlay'], [data-slot='dialog-content'], [data-slot='alert-dialog-overlay'], [data-slot='alert-dialog-content'], [data-radix-popper-content-wrapper]"
 			)
 		);
 	};

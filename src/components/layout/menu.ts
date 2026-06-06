@@ -4,7 +4,6 @@ import {
 	DashboardSquare01Icon,
 	Mail01Icon,
 	MailSettingIcon,
-	Settings02Icon,
 	UserGroupIcon,
 	UserIcon
 } from "@hugeicons/core-free-icons";
@@ -40,11 +39,42 @@ const navPlatformItem: NavItemProps[] = [
 	}
 ];
 
+const navContentItem: NavItemProps[] = [
+	{
+		title: "Skills",
+		url: route.private.contentSkills,
+		icon: UserIcon
+	},
+	{
+		title: "Projects",
+		url: route.private.contentProjects,
+		icon: ComputerProtectionIcon
+	},
+	{
+		title: "Experience",
+		url: route.private.contentExperience,
+		icon: UserGroupIcon
+	},
+	{
+		title: "Profile",
+		url: route.private.contentProfile,
+		icon: UserIcon
+	}
+];
+
+const navContactItem: NavItemProps[] = [
+	{
+		title: "Contact Inbox",
+		url: route.private.contact,
+		icon: Mail01Icon
+	}
+];
+
 const navSystemItem: NavItemProps[] = [
 	{
 		title: "System Settings",
 		url: route.private.system,
-		icon: Settings02Icon,
+		icon: Audit01Icon,
 		roles: ["ADMIN", "SUPER_ADMIN"]
 	}
 ];
@@ -79,4 +109,12 @@ const navSMTPItem: NavItemProps[] = [
 	}
 ];
 
-export { navLogsItem, navPlatformItem, navSMTPItem, navSystemItem, userItems };
+export {
+	navContactItem,
+	navContentItem,
+	navLogsItem,
+	navPlatformItem,
+	navSMTPItem,
+	navSystemItem,
+	userItems
+};

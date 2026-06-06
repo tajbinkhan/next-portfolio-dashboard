@@ -10,6 +10,11 @@ export const route = {
 		sessions: "/sessions",
 		auditLogs: "/audit-logs",
 		system: "/system",
+		contentSkills: "/content/skills",
+		contentProjects: "/content/projects",
+		contentExperience: "/content/experience",
+		contentProfile: "/content/profile",
+		contact: "/contact",
 		smtpProviders: "/smtp-providers",
 		emailTemplates: "/email-templates",
 		emailTemplateEdit: (publicId: string) => `/email-templates/${publicId}/edit`,
@@ -60,7 +65,16 @@ export const apiRoute = {
 	emailTemplate: (publicId: string) => `/email-templates/${publicId}`,
 	emailLogs: "/email-logs",
 	emailLog: (logId: string) => `/email-logs/${logId}`,
-	emailLogResend: (logId: string) => `/email-logs/${logId}/resend`
+	emailLogResend: (logId: string) => `/email-logs/${logId}/resend`,
+	dashboardSkills: "/dashboard/content/skills",
+	dashboardProjects: "/dashboard/content/projects",
+	dashboardExperience: "/dashboard/content/experience",
+	dashboardEducation: "/dashboard/content/education",
+	dashboardLanguages: "/dashboard/content/languages",
+	dashboardHobbies: "/dashboard/content/hobbies",
+	contactSubmissions: "/contact-submissions",
+	contactSubmission: (id: string) => `/contact-submissions/${id}`,
+	contactSubmissionStatus: (id: string) => `/contact-submissions/${id}/status`
 } as const;
 
 const DEFAULT_LOGIN_REDIRECT = route.private.dashboard;

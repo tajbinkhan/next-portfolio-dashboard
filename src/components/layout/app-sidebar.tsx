@@ -12,6 +12,8 @@ import {
 
 import { AppSwitcher } from "@/components/layout/app-switcher";
 import {
+	navContactItem,
+	navContentItem,
 	navLogsItem,
 	navPlatformItem,
 	navSMTPItem,
@@ -31,6 +33,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
 			</SidebarHeader>
 			<SidebarContent>
 				<NavMenu label="Platform" items={navPlatformItem} />
+				<NavMenu label="Content" items={navContentItem} />
+				<NavMenu label="Contact" items={navContactItem} />
 				<NavMenu label="SMTP" items={navSMTPItem} />
 				<NavMenu label="Logs" items={navLogsItem} />
 				<NavMenu label="System" items={navSystemItem} />

@@ -27,6 +27,7 @@ function DialogClose({ ...props }: React.ComponentProps<typeof DialogPrimitive.C
 
 function DialogOverlay({
 	className,
+	onClick,
 	...props
 }: React.ComponentProps<typeof DialogPrimitive.Overlay>) {
 	return (
@@ -36,6 +37,10 @@ function DialogOverlay({
 				"data-open:animate-in data-open:fade-in-0 data-closed:animate-out data-closed:fade-out-0 fixed inset-0 isolate z-50 bg-black/80 duration-100 supports-backdrop-filter:backdrop-blur-xs",
 				className
 			)}
+			onClick={event => {
+				event.stopPropagation();
+				onClick?.(event);
+			}}
 			{...props}
 		/>
 	);
